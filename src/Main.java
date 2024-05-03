@@ -7,11 +7,14 @@ public class Main {
         //Declarar opcion
         String opcion;
 
+        // Crear instancias
+        Doctor doctor = new Doctor();
+
         // Interfaz de consola
         while (true) {
             System.out.println("--------------------------------------");
             System.out.println("SISTEMA DE CONSULTORIO 1.0");
-            System.out.println(">Introduzca la opcion que desea realizar");
+            System.out.println("> Introduzca la opcion que desea realizar");
             System.out.println("1 = Dar de alta a doctor");
             System.out.println("2 = Dar de alta a paciente");
             System.out.println("3 = Crear cita");
@@ -24,7 +27,7 @@ public class Main {
             switch (opcion) {
                 case "1":
                     System.out.println("- Dar de alta a doctor");
-
+                    doctor.altaDoctor();
                     break;
                 case "2":
                     System.out.println("- Dar de alta a paciente");
