@@ -50,6 +50,22 @@ public class Doctor {
         }
     }
 
+    // Función para ver la lista de doctores
+    public void listaDoctores() {
+        try {
+            // Leer doctores.csv y mostrar los registros
+            File file = new File(rutaArchivo);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                System.out.println(line);
+            }
+            scanner.close();
+        } catch (IOException e) {
+            System.out.println("Error: " + e);
+        }
+    }
+
     // Función complementaria para revisar si el doctor ya existe
     private boolean validarAlta(String nombre, String especialidad) throws IOException {
         File file = new File(rutaArchivo);
