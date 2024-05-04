@@ -37,7 +37,7 @@ public class Main {
                     break;
                 case "3":
                     System.out.println("- Crear cita");
-
+                    cita.crearCita();
                     break;
                 case "4":
                     System.out.println("- Ver lista de dcotores");

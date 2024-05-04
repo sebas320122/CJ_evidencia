@@ -28,8 +28,3 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-# Ignorar archivos CSV
-*.csv
-
-# Incluir carpeta db
-src/db/*
