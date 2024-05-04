@@ -47,7 +47,20 @@ public class Paciente {
         }
     }
 
-    
+    public void listaPacientes() {
+        try {
+            // Leer pacientes.csv y mostrar los registros
+            File file = new File(rutaArchivo);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                System.out.println(line);
+            }
+            scanner.close();
+        } catch (IOException e) {
+            System.out.println("Error: " + e);
+        }
+    }
     // Función complementaria para revisar si el paciente ya existe
     private boolean validarAlta(String nombre) throws IOException {
         File file = new File(rutaArchivo);

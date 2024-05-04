@@ -30,3 +30,6 @@ bin/
 
 # Ignorar archivos CSV
 *.csv
+
+# Incluir carpeta db
+src/db/*
