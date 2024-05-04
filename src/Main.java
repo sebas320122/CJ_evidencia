@@ -22,7 +22,8 @@ public class Main {
             System.out.println("3 = Crear cita");
             System.out.println("4 = Ver lista de doctores");
             System.out.println("5 = Ver lista de pacientes");
-            System.out.println("6 = Salir");
+            System.out.println("6 = Ver lista de citas");
+            System.out.println("7 = Salir");
             System.out.println("--------------------------------------");
             opcion = scanner.nextLine();
 
@@ -48,6 +49,10 @@ public class Main {
                     paciente.listaPacientes();
                     break;
                 case "6":
+                    System.out.println("- Ver lista de citas");
+                    cita.listaCitas();
+                    break;
+                case "7":
                     System.out.println("- Salir");
                     System.exit(0);
                     break;
