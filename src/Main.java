@@ -13,6 +13,12 @@ public class Main {
         Cita cita = new Cita();
         Administrador administrador = new Administrador();
 
+        // Control de acceso
+        System.out.println("--- Inicio de sesion ---");
+        if (!administrador.login()) {
+            return;
+        }
+
         // Interfaz de consola
         while (true) {
             System.out.println("--------------------------------------");

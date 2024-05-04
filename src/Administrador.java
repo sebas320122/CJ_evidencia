@@ -70,6 +70,52 @@ public class Administrador {
         }
     }
 
+    // Función para acceder al sistema
+    public boolean login() {
+        try {
+            // Veri
+            File file = new File(rutaArchivo);
+            if (!file.exists() || file.length() == 0) {
+                System.out.println("No hay administradores, generando adminsitrador...");
+                altaAdministrador();
+                return true;
+            }
+
+            // Pedir datos
+            System.out.println("> Ingresa tu ID:");
+            id = scanner.nextInt();
+            scanner.nextLine();
+            System.out.println("> Ingresa tu password:");
+            password = scanner.nextLine();
+
+            // Validar credenciales
+            if (validarCrendeciales(id, password)) {
+                System.out.println("Ha ingresado exitosamente");
+                return true;
+            } else {
+                System.out.println("Las claves ingresadas no son validas");
+                return false;
+            }
+        } catch (IOException e) {
+            System.out.println("Error: " + e);
+            return false;
+        }
+    }
+
+    // Función complementaria para validar id y password de administrador
+    private boolean validarCrendeciales(int id, String password) throws IOException {
+        File file = new File(rutaArchivo);
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] partes = line.split(",");
+            if (partes.length >= 3 && Integer.parseInt(partes[0]) == id && partes[2].equals(password)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     // Función complementaria para validar si el administrador ya existe
     private boolean validarAlta(String nombre, String password) throws IOException {
         File file = new File(rutaArchivo);
