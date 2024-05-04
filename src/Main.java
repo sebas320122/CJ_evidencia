@@ -11,6 +11,7 @@ public class Main {
         Doctor doctor = new Doctor();
         Paciente paciente = new Paciente();
         Cita cita = new Cita();
+        Administrador administrador = new Administrador();
 
         // Interfaz de consola
         while (true) {
@@ -23,7 +24,9 @@ public class Main {
             System.out.println("4 = Ver lista de doctores");
             System.out.println("5 = Ver lista de pacientes");
             System.out.println("6 = Ver lista de citas");
-            System.out.println("7 = Salir");
+            System.out.println("7 = Dar de alta adminsitrador");
+            System.out.println("8 = Ver lista de administradores");
+            System.out.println("9 = Salir");
             System.out.println("--------------------------------------");
             opcion = scanner.nextLine();
 
@@ -53,6 +56,14 @@ public class Main {
                     cita.listaCitas();
                     break;
                 case "7":
+                    System.out.println("- Dar de alta administrador");
+                    administrador.altaAdministrador();
+                    break;
+                case "8":
+                    System.out.println("- Ver lista de adminsitradores");
+
+                    break;
+                case "9":
                     System.out.println("- Salir");
                     System.exit(0);
                     break;
