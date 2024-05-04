@@ -44,7 +44,7 @@ public class Main {
                     cita.crearCita();
                     break;
                 case "4":
-                    System.out.println("- Ver lista de dcotores");
+                    System.out.println("- Ver lista de doctores");
                     doctor.listaDoctores();
                     break;
                 case "5":
@@ -60,8 +60,8 @@ public class Main {
                     administrador.altaAdministrador();
                     break;
                 case "8":
-                    System.out.println("- Ver lista de adminsitradores");
-
+                    System.out.println("- Ver lista de administradores");
+                    administrador.listaAdministradores();
                     break;
                 case "9":
                     System.out.println("- Salir");

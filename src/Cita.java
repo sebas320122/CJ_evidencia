@@ -56,6 +56,7 @@ public class Cita {
         }
     }
 
+    // Función para ver la lista de citas
     public void listaCitas() {
         try {
             // Leer doctores.csv y mostrar los registros

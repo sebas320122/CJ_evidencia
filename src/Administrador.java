@@ -48,6 +48,28 @@ public class Administrador {
         }
     }
 
+    // Funcion para ver lista de administradores
+    public void listaAdministradores() {
+        try {
+            // Leer administradores.csv
+            File file = new File(rutaArchivo);
+            Scanner scanner = new Scanner(file);
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                String[] partes = line.split(",");
+                if (partes.length > 2) {
+                    // Solo mostrar id y nombre
+                    System.out.println(partes[0] + ", " + partes[1]);
+                } else {
+                    System.out.println(line);
+                }
+            }
+            scanner.close();
+        } catch (IOException e) {
+            System.out.println("Error: " + e);
+        }
+    }
+
     // Función complementaria para validar si el administrador ya existe
     private boolean validarAlta(String nombre, String password) throws IOException {
         File file = new File(rutaArchivo);
@@ -80,5 +102,5 @@ public class Administrador {
         return maxId + 1;
     }
 
-    // Resto del código omitido para mantener la concisión
+
 }

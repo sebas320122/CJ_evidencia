@@ -47,6 +47,7 @@ public class Paciente {
         }
     }
 
+    // Funcion para ver lista de pacientes
     public void listaPacientes() {
         try {
             // Leer pacientes.csv y mostrar los registros
