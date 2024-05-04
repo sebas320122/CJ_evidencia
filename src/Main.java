@@ -9,6 +9,7 @@ public class Main {
 
         // Crear instancias
         Doctor doctor = new Doctor();
+        Paciente paciente = new Paciente();
 
         // Interfaz de consola
         while (true) {
@@ -31,7 +32,7 @@ public class Main {
                     break;
                 case "2":
                     System.out.println("- Dar de alta a paciente");
-
+                    paciente.altaPaciente();
                     break;
                 case "3":
                     System.out.println("- Crear cita");
