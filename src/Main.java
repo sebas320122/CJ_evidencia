@@ -12,6 +12,10 @@ public class Main {
         Paciente paciente = new Paciente();
         Cita cita = new Cita();
         Administrador administrador = new Administrador();
+        Instalacion instalacion = new Instalacion();
+
+        // Crear ruta src/db si no existe
+        instalacion.verificarRuta();
 
         // Control de acceso
         System.out.println("--- Inicio de sesion ---");

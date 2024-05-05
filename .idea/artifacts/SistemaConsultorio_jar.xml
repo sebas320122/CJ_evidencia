@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SistemaConsultorio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SistemaConsultorio_jar</output-path>
+    <root id="archive" name="SistemaConsultorio.jar">
+      <element id="module-output" name="SistemaConsultorio" />
+    </root>
+  </artifact>
+</component>
